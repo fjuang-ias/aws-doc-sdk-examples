@@ -20,9 +20,9 @@ namespace CreateBucket
         {
 
             // Specify a name for the new bucket.
-            const string newBucketName = "doc-example-bucket";
+            const string newBucketName = "abinitio-fjuang-doc-example-bucket";
 
-            var client = new AmazonS3Client();
+            var client = new AmazonS3Client(Amazon.RegionEndpoint.USEast1);
             Console.WriteLine($"\nCreating a new bucket, named: {newBucketName}.");
 
             await CreatingBucketAsync(client, newBucketName);
